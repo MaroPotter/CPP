@@ -1,0 +1,31 @@
+Lab1:
+1.Proszê napisaæ klasê Array, która bêdzie przechowywa³a liczby, pamiêtaj¹c ile ich przechowuje, proszê te¿ o napisanie metod:
+int get(int index); -pobieraj¹ca element o zadanym indeksie
+void set(int index, int newValue); – ustawiaj¹ca element o zadanym indeksie
+
+2. Proszê o napisanie klasy jw., ale z metodami:
+int* front(); – zwracaj¹ca wskaŸnik do pierwszego elementu
+int* back(); – zwracaj¹ca wskaŸnik do ostatniego elementu
+int size(); – zwracaj¹ca iloœæ elementów
+
+3. Proszê o napisanie klasy jw., ale z metodami:
+void fill(int value); – ustawia wszystkim elementom tablicy dan¹ wartoœæ
+void assign(const int tab[], int tabSize); – kopiuje elementy z tablicy do naszego Array
+
+4. Proszê o napisanie klasy jw., ale z metodami:
+Array* clone(); – wykonuje g³êbok¹ kopiê naszego obiektu przy pomocy dynamicznej allokacji
+
+5. Proszê o napisanie klasy jw., ale z metodami:
+void reverse(); – odwraca kolejnoœæ elementów w tablicy
+int count(int value); – zwraca iloœæ wyst¹pieñ danego elementu
+
+6. Proszê o napisanie klasy jw., ale z metodami:
+… toText(); – zamienia nasz obiekt na tekst
+void print(); – wypisuje nasz obiekt na ekran
+
+7. Proszê o napisanie klasy jw., ale z metodami:
+void swap(Array& anotherArray); – funkcja do zamiany zawartoœci miêdzy tablicami
+int find(int value); – funkcja która zwraca pozycjê znalezionej liczby
+
+*8. Proszê o napisanie klasy jw., ale z metodami (operatory strumienia):
+friend std::ostream& operator<>(std::istream& os, Array& array);

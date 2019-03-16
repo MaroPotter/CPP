@@ -1,0 +1,14 @@
+Lab2:
+Proszê o napisanie struktury Item, która bêdzie zawiera³a:
+value, description, bonusType (atak, obrona, …)
+struktura ma odzwierciedlaæ bonusy za ró¿ne przedmioty w grze RPG.
+Proszê o napisanie klasy Equipment, która bêdzie zawiera³a wiele elementów struktury Item. Poza tym proszê o napisanie nastêpuj¹cych funkcji:
+
+1. funkcja dodaj¹ca Item do naszego Equipment
+2. funkcja wyœwietlaj¹ca istniej¹ce elementy z numeracj¹ i zadanym wciêciem
+3. funkcja zapisuj¹ca Itemy do pliku
+4. funkcja wczytuj¹ca Itemy z pliku
+5. funkcja zwracaj¹ca sumê wartoœci statystyk dla okreœlonej wartoœci bonusType np. dla ataku
+6. funkcja wyœwietlaj¹ca elementy tylko dla okreœlonej wartoœci bonusType
+7. funkcja ³¹cz¹ca dwa obiekty Equipment
+*8.funkcja sortuj¹ca Itemy wg bonusType, potem wg wartoœci, potem dopiero wg nazwy
