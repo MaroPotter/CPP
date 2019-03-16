@@ -1,3 +1,0 @@
-4	bow	DoT
-5	axe	Slow
-6	zadaje obrazenia AD	AD Damage
