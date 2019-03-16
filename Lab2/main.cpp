@@ -97,7 +97,7 @@ void Equipment::write(string separator) {
 /* void Equipment::read() {
 
      ifstream file;
-     file.open("odczyt.txt");
+     file.open("../odczyt.txt");
      if (!file.good())
          cout << "Error! Nie udalo sie otworzyc pliku!" << endl;
      string line;
@@ -116,7 +116,7 @@ void Equipment::write(string separator) {
 
 /* void Equipment::read() {
     ifstream file;
-    file.open("odczyt.txt");
+    file.open("../odczyt.txt");
     if(!file.good())
         cout<< "Error! Nie udalo sie otworzyc pliku! "<<endl;
     string line;
@@ -145,7 +145,7 @@ void Equipment::write(string separator) {
 
 /* void Equipment::read() {
     ifstream file;
-    file.open("reading.txt");
+    file.open("../reading.txt");
     if (!file.good())
         cout << "Error! Nie udalo sie otworzyc pliku!" << endl;
     while (!file.eof()) {
@@ -182,7 +182,7 @@ void Equipment::write(string separator) {
 
 void Equipment::read() {
     ifstream file;
-    file.open("odczyt.txt");
+    file.open("../odczyt.txt");
     if (!file.good())
         cout << "Error! Nie udalo sie otworzyc pliku!" << endl;
     while (!file.eof()) {
