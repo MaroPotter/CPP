@@ -12,8 +12,8 @@ class Object {
 public:
     Object() = default;
     Object(const Object&) = default;
-    virtual ~Object();
-    virtual operator string() const
+    virtual ~Object() = default;
+    explicit virtual operator string() const
     {
         return toString();
     }
@@ -34,7 +34,6 @@ protected:
         return obj.whatAmI() == whatAmI();
     }
 };
-Object::~Object() =  default; //zdefiniowany tutaj aby uniknac warninga
 
 class DoubleObject : public Object {
     double value;

@@ -1,17 +1,23 @@
+//
+// Created by marek on 09.04.2019.
+//
 #include <iostream>
-#include <cstddef>
-#include "oldmain.h"
 
 using namespace std;
-typedef long long T;
 
-class List
-{
-size_t size;
+#include "oldmain.h"
+#include "list.h"
 
-};
+
 int main() {
-    cout << "Hello, World!" << std::endl;
-    DoubleObject a(2);
+    auto *b = new DoubleObject(3.0);
+    auto *c = new DoubleObject(4.0);
+    auto *d = new DoubleObject(5.0);
+    List l;
+    l.push_back(b);
+    l.push_back(c);
+    l.push_back(d);
+    cout<<l.at(2)<<endl;
     return 0;
 }
+

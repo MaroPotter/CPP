@@ -3,4 +3,4 @@ project(Lab5)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Lab5 main.cpp oldmain.h)
+add_executable(Lab5 oldmain.h list.h list.cpp main.cpp)

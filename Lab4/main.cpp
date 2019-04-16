@@ -68,7 +68,7 @@ public:
     StringObject(const string &text) : text(text) {}
     StringObject(const StringObject&) = default;
     ~StringObject() override = default;
-    string whatAmI() const overrided
+    string whatAmI() const override
     {
         return text;
     }
