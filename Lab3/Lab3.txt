@@ -1,0 +1,22 @@
+Zadanie na nastêpny raz:
+Napisanie klasy String, do obs³ugi tekstu, która allokuje tyle pamiêci ile trzeba na przechowanie danego rozmiaru tekstu, 
+oraz informacji ile tekstu jest w danej chwili zaalokowanego (tekst przez char*). 
+Proszê o napisanie konstruktorów (domyœlnego i kopiuj¹cego g³êboko), destruktora i operatorów przypisania, a poza tym:
+1. operator+(const char* text)
+   operator+(const String& text)
+2. operator==(const char* text)
+   operator==(const String& text)
+3. operator<(const String& text) 
+   operator>(const String& text)
+4. operator[](size_t index); – wersja zwyk³a i constowa
+   operator() zwracaj¹cy rozmiar
+   operator(const char* text) zwracaj¹cy pozycjê tekstu text
+5. operator konwersji do boola lub size_t
+   jawny operator konwersji do std::string
+6. operatory strumienia:
+   std::ostream& <<() std::istream&>>()
+7. operator++() i operator++(int) – pre i post inkrementacji,
+   który np. doda z ty³u tekstu jedn¹ spacjê
+   operatory jw. ale dekrementacji, które usunie ostatni znak
+*8.operator<<(double), który dopiszê dan¹ liczbê na koniec tekstu
+   operator<<(int)
