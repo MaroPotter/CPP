@@ -33,27 +33,33 @@ List::~List() {
     }
 }
 
-Object *List::at(size_t index)
-{
-    if(index >= numberOfElements)
+Object *List::at(size_t index) {
+    if (index >= numberOfElements)
         return nullptr;
     Node *node = head;
-    for(decltype(index) i = 0; node && i!=index; ++i, node=node->next) {}
+    for (decltype(index) i = 0; node && i != index; ++i, node = node->next) {}
     return node->obj;
-}
-Object *List::operator[](size_t index)
-{
-    return this->at(index);
-}
-void List::push_back(Object *newObject) {
-    Node *newNode = new Node(newObject);
-    if(head)
+
+    /* if(index<numberOfElements)
     {
-        at_impl(numberOfElements-1)->next=newNode;
+        return at_impl(index)->obj;
     }
     else
     {
-        head=newNode;
+        return nullptr;
+    } */
+}
+
+Object *List::operator[](size_t index) {
+    return this->at(index);
+}
+
+void List::push_back(Object *newObject) {
+    Node *newNode = new Node(newObject);
+    if (head) {
+        at_impl(numberOfElements - 1)->next = newNode;
+    } else {
+        head = newNode;
     }
 
     numberOfElements++;
@@ -83,18 +89,14 @@ Object *List::pop_back() {
     numberOfElements--;
     return valueOfLastNode;
 }
-List::Node *List::at_impl(size_t index)
-{
-    if(index<numberOfElements)
-    {
+
+List::Node *List::at_impl(size_t index) {
+    if (index < numberOfElements) {
         Node *node = head;
-        for(decltype(index) i=0; node && i!=index; ++i, node=node->next)
-        {
+        for (decltype(index) i = 0; node && i != index; ++i, node = node->next) {
         }
         return node;
-    }
-    else
-    {
+    } else {
         return nullptr;
     }
 }

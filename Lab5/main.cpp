@@ -18,6 +18,7 @@ int main() {
     l.push_back(c);
     l.push_back(d);
     cout<<l.at(2)<<endl;
+    cout<<l[2]<<endl;
     return 0;
 }
 
