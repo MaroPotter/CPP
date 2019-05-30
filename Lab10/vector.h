@@ -83,6 +83,39 @@ public:
     }
 };
 
+template<typename T, size_t resize_step>
+Vector<T, resize_step>::Vector(const Vector &v)
+        : _capacity(v._capacity), _size(v._size)
+{
+    _data.reset(new T[_size]);
+    for (auto i = 0; i < _size; ++i) {
+        _data[i] = v._data[i];
+    }
+}
 
+template<typename T, size_t resize_step>
+T &Vector<T, resize_step>::at(size_t index) const {
+    if(index>=_size)
+    {
+        throw std::out_of_range("...");
+    }
+    return _data[index];
+}
+
+template<typename T, size_t resize_step>
+size_t Vector<T, resize_step>::size() const
+{
+    return _size;
+}
+
+template<typename T, size_t resize_step>
+template<size_t N>
+Vector<T, resize_step>::Vector(const T(&staticArray)[N]): _data(new T[N]), _capacity(N), _size(N){
+    for(unsigned i = 0; i < N; i++){
+        _data[i] = staticArray[i];
+    }
+    // alternatywnie:
+    // copy(staticArray, staticArray + N, data);
+}
 
 #endif // VECTOR_H
